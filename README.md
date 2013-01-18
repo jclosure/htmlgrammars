@@ -20,19 +20,18 @@ Treetop Reference
 
 Add this line to your application's Gemfile:
 
-    gem 'htmlgrammars'
+    gem 'htmlgrammars', :git => 'https://github.com/jclosure/htmlgrammars.git'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install htmlgrammars
-
 ## Usage
 
-TODO: Write usage instructions here
+	parser = SimpleHTMLParser.new
+	result = @parser.parse("<p>monkey</p>").content
+
+	#=> [[:tag, "<p>"], [:text, "monkey"], [:tag, "</p>"]]
 
 ## Contributing
 
