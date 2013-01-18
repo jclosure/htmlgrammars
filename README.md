@@ -1,6 +1,6 @@
 # Htmlgrammars
 
-Playground for creating html parsing grammars for automated consumption of web content.  The idea is that once we're able to create tokenized representations of content, then we'll be able to apply stochastic processing algorithms over it to identify emergent thematic categories.  The hope is that this will lead to the indentification of higher order grammars.  Ideally we will be able to distill the generative rule sets for these, so that they can be infered and created automatically.
+Playground for creating html parsing grammars for automated consumption of web content.  The idea is that once we're able to create tokenized representations of content, then we'll be able to apply stochastic processing algorithms over it to identify emergent thematic categories.  The hope is that this will lead to the indentification of higher order grammars.  Ideally we will be able to distill the generative rule sets for these, so that they can be automatically inferred, created, and applied to streams of web content.
 
 The first implementations will be dead simple html processors focussed on distilling categories with directed learning.
 
