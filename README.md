@@ -6,9 +6,14 @@ The first implementations will be dead simple html processors focussed on distil
 
 
 Treetop Reference
-http://treetop.rubyforge.org/syntactic_recognition.html 
-http://www.trsolutions.biz/blog
-http://po-ru.com/diary/getting-started-with-treetop/
+
+	http://treetop.rubyforge.org/syntactic_recognition.html 
+	http://www.trsolutions.biz/blog
+	http://po-ru.com/diary/getting-started-with-treetop/
+	http://thingsaaronmade.com/blog/a-quick-intro-to-writing-a-parser-using-treetop.html
+	https://github.com/aarongough/koi-reference-parser
+	https://github.com/aarongough/treetop-sexp-parser
+
 
 
 ## Installation
