@@ -28,10 +28,37 @@ And then execute:
 
 ## Usage
 
+AST Dump
+
+    parser = SimpleHTMLParser.new
+	result = @parser.parse("<p>monkey</p>")
+	
+	=> SyntaxNode+Document0 offset=0, "<p>monkey</p>" (content):
+	  SyntaxNode+Tag1+Tag0 offset=0, "<p>" (content):
+	    SyntaxNode offset=0, "<"
+	    SyntaxNode offset=1, "p":
+	      SyntaxNode offset=1, "p"
+	    SyntaxNode offset=2, ">"
+	  SyntaxNode+Text0 offset=3, "monkey" (content):
+	    SyntaxNode offset=3, "m"
+	    SyntaxNode offset=4, "o"
+	    SyntaxNode offset=5, "n"
+	    SyntaxNode offset=6, "k"
+	    SyntaxNode offset=7, "e"
+	    SyntaxNode offset=8, "y"
+	  SyntaxNode+Tag1+Tag0 offset=9, "</p>" (content):
+	    SyntaxNode offset=9, "<"
+	    SyntaxNode offset=10, "/p":
+	      SyntaxNode offset=10, "/"
+	      SyntaxNode offset=11, "p"
+	    SyntaxNode offset=12, ">"
+
+Restructured content dump
+
 	parser = SimpleHTMLParser.new
 	result = @parser.parse("<p>monkey</p>").content
 
-	#=> [[:tag, "<p>"], [:text, "monkey"], [:tag, "</p>"]]
+	=> [[:tag, "<p>"], [:text, "monkey"], [:tag, "</p>"]]
 
 ## Contributing
 
