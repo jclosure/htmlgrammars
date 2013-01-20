@@ -1,0 +1,33 @@
+grammar LexicalRules
+  rule alpha
+      [A-Za-z_]
+    end
+
+    rule alphanumeric
+      alpha / [0-9]
+    end
+
+    rule s    # Optional space
+      S?
+    end
+
+    rule S    # Mandatory space
+      (white / comment_to_eol / comment_c_style)+
+    end
+
+    rule white
+      [ \t\n\r]+
+    end
+
+    rule comment_to_eol
+      '//' (!"\n" .)* {
+    	  def node_type; :comment; end
+    	}
+    end
+
+    rule comment_c_style
+      '/*' (!'*/' . )* '*/' {
+  	   def node_type; :comment; end
+  	  }
+    end
+end

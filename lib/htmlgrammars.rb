@@ -3,9 +3,13 @@ require "htmlgrammars/version"
 require "treetop"
 require "polyglot"
 
+#NOTE: THESE DO NOT RELOAD IN THE REPL
+require "LexicalRules"
+
+
 module Htmlgrammars
   	
-	#require "simple_html"
+	#load all treetop files
 	require_files = []
 	require_files.concat Dir[File.join(File.dirname(__FILE__), '.', '**', '*.treetop')]
 

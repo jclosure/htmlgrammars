@@ -1,8 +1,10 @@
-grammar ComplexHTML
+grammar HTML
+  include LexicalRules
+
   rule document
     (text / open_tag / close_tag / empty_tag)* {
       def content
-        elements.map{ |e| e.content }
+        elements.map{ |e| e.content }.reject{ |match| match[0] == :text && match[1] =~ /^\n/ }
       end
     }
   end

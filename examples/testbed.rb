@@ -1,6 +1,5 @@
-$:.unshift(File.dirname(__FILE__) + "/../lib")
 $:.unshift(File.dirname(__FILE__))
-$:.unshift(File.dirname(__FILE__) + "/lib")
+$:.unshift(File.dirname(__FILE__) + "/../lib")
 
 require "treetop"
 require "polyglot"
@@ -17,6 +16,7 @@ require "uri"
 
 class Testbed
 	def load_parser(grammer_file)
+		Treetop.load($:[0]+"/LexicalRules")
 		Treetop.load($:[0]+"/"+grammer_file).new
 	end
 

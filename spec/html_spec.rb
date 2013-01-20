@@ -1,6 +1,7 @@
 require "spec_helper"
 
-describe SimpleHTMLParser, "Behaving as expected" do
+
+describe HTMLParser, "Behaving as expected" do
 	before :all do
 		@parser = SimpleHTMLParser.new
 	end
