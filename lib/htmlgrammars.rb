@@ -3,7 +3,6 @@ require "htmlgrammars/version"
 require "treetop"
 require "polyglot"
 
-
 module Htmlgrammars
   	
 	#require "simple_html"
